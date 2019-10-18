@@ -2,19 +2,18 @@ package com.example.thirdlab;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button checktime;
+    Button Checktime;
+    Button ResultApp;
 
 
     @Override
@@ -22,8 +21,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        checktime = findViewById(R.id.checktime);
-        checktime.setOnClickListener(this);
+        Checktime = findViewById(R.id.checktime);
+        Checktime.setOnClickListener(this);
+
+        ResultApp =findViewById(R.id.resultApp);
+        ResultApp.setOnClickListener(this);
 
     }
 
@@ -34,11 +36,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 checktime();
                 break;
             case R.id.resultApp:
-
+                data();
                 break;
 
         }
-        }
+
+    }
 
 
     public void checktime(){
@@ -48,10 +51,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String dateString = sdf.format(new Date(dateInMillis));
         System.out.println(dateString);
 
-        Intent intent = new Intent(this, secondActivity.class);
+        Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("message", dateString);
         startActivity(intent);
     }
+
+    public void data(){
+        Intent intent = new Intent(this, DataActivity.class);
+        startActivity(intent);
+    }
+
+
     }
 
 

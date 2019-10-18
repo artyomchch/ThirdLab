@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataActivity"></activity>
-        <activity android:name=".secondActivity" />
+        <activity android:name=".DataActivity2"></activity>
+        <activity android:name=".DataActivity" />
+        <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
