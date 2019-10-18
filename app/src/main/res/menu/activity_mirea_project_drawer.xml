@@ -20,6 +20,15 @@
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/menu_tools" />
+        <item
+            android:id="@+id/browserFragment"
+            android:icon="@drawable/chrome"
+            android:title="Browser" />
+
+        <item
+            android:id="@+id/calculatorFragment"
+            android:icon="@drawable/calculator"
+            android:title="Calculator" />
     </group>
 
     <item android:title="Communicate">
