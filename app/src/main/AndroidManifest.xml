@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataActivity2"></activity>
+        <activity android:name=".GoogleMaps"></activity>
+        <activity android:name=".DataActivity2" />
         <activity android:name=".DataActivity" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">

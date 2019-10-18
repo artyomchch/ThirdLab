@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button Checktime;
     Button ResultApp;
+    Button SystemIntents;
 
 
     @Override
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ResultApp =findViewById(R.id.resultApp);
         ResultApp.setOnClickListener(this);
 
+        SystemIntents = findViewById(R.id.systemintents);
+        SystemIntents.setOnClickListener(this);
+
     }
 
 
@@ -37,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.resultApp:
                 data();
+                break;
+            case R.id.systemintents:
+                googlemaps();
                 break;
 
         }
@@ -61,7 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
     }
 
-
+    public void googlemaps(){
+        Intent intent = new Intent(this, GoogleMaps.class);
+        startActivity(intent);
+    }
     }
 
 
