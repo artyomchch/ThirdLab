@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoogleMaps"></activity>
+        <activity
+            android:name=".MireaProject"
+            android:label="@string/title_activity_mirea_project"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".MainFragment" />
+        <activity android:name=".GoogleMaps" />
         <activity android:name=".DataActivity2" />
         <activity android:name=".DataActivity" />
         <activity android:name=".SecondActivity" />

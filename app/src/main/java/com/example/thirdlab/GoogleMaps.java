@@ -12,6 +12,7 @@ public class GoogleMaps extends AppCompatActivity implements View.OnClickListene
     Button Call;
     Button Browser;
     Button Maps;
+    Button Fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
@@ -26,6 +27,9 @@ public class GoogleMaps extends AppCompatActivity implements View.OnClickListene
 
         Maps = findViewById(R.id.maps);
         Maps.setOnClickListener(this);
+
+        Fragment = findViewById(R.id.maps);
+        Fragment.setOnClickListener(this);
     }
 
     @Override

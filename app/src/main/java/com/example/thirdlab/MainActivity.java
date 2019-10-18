@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button Checktime;
     Button ResultApp;
     Button SystemIntents;
+    Button fragment;
+    Button Lasttask;
 
 
     @Override
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SystemIntents = findViewById(R.id.systemintents);
         SystemIntents.setOnClickListener(this);
 
+        fragment = findViewById(R.id.frag);
+        fragment.setOnClickListener(this);
+
+        Lasttask = findViewById(R.id.lasttask);
+        Lasttask.setOnClickListener(this);
+
     }
 
 
@@ -40,10 +48,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 checktime();
                 break;
             case R.id.resultApp:
-                data();
+                gotoactive(DataActivity.class);
                 break;
             case R.id.systemintents:
-                googlemaps();
+                gotoactive(GoogleMaps.class);
+                break;
+            case R.id.frag:
+                gotoactive(MainFragment.class);
+                break;
+            case R.id.lasttask:
+                gotoactive(MireaProject.class);
                 break;
 
         }
@@ -70,6 +84,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void googlemaps(){
         Intent intent = new Intent(this, GoogleMaps.class);
+        startActivity(intent);
+    }
+
+   // public void fragment(){
+      //  Intent intent = new Intent(this, MainFragment.class);
+      //  startActivity(intent);
+  //  }
+
+    public void gotoactive(Class activity){
+        Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
     }
