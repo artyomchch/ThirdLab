@@ -48,16 +48,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 checktime();
                 break;
             case R.id.resultApp:
-                gotoactive(DataActivity.class);
+                goToActive(DataActivity.class);
                 break;
             case R.id.systemintents:
-                gotoactive(GoogleMaps.class);
+                goToActive(GoogleMaps.class);
                 break;
             case R.id.frag:
-                gotoactive(MainFragment.class);
+                goToActive(MainFragment.class);
                 break;
             case R.id.lasttask:
-                gotoactive(MireaProject.class);
+                goToActive(MireaProject.class);
                 break;
 
         }
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       //  startActivity(intent);
   //  }
 
-    public void gotoactive(Class activity){
+    public void goToActive(Class activity){
         Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
